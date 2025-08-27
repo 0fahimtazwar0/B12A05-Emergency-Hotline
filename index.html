@@ -4,52 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joruri Sheba</title>
-    <!-- daisyui & tailwindcss -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- google fonts: noto sans bangla, roboto, inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Bengali:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Bengali:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <!-- google icons -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- local css -->
-         <link rel="stylesheet" href="style.css">
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyui & tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- local css -->
+     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#F5FFF6]">
     
 
-    <header>
+    <header class="bg-white">
         <nav class="px-[60px] py-6 justify-between items-center h-fit flex">
             <div class="flex items-center gap-2.5">
-                <img src="assets/logo.png" alt="Bangladesh Logo" class="w-[50px] h-[50px]">
+                <img src="assets/logo.png" alt="Bangladesh Logo" class="w-[50px] aspect-square">
                 <h3 class="font-[inter] font-black text-[#006747] text-xl">Emergency<br>
                     Service
                 </h3>
             </div>
             <div class="flex gap-5">
-                <div class="flex h-[52px] w-[123px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span class="font-[inter] font-black">0</span><img src="assets/heart.png" alt="Heart" class="w-[30px] h-[30px]"></div>
+                <div class="flex h-[52px] w-[123px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span class="font-[inter] font-black text-base">0</span><img src="assets/heart.png" alt="Heart" class="w-[30px] aspect-square"></div>
 
-                <div class="flex h-[52px] w-[106px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span class="font-[inter] font-black">0</span><img src="assets/coin.png" alt="Coin" class="w-6 h-6"></div>
+                <div class="flex h-[52px] w-[106px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span class="font-[inter] font-black text-base">0</span><img src="assets/coin.png" alt="Coin" class="w-6 aspect-square"></div>
 
-                <div class="flex h-[52px] w-[127px] bg-[#00A63E] rounded-full items-center justify-center gap-2.5 font-[inter] font-semibold text-white"><span>0</span> Copy</div>
+                <div class="flex h-[52px] w-[127px] bg-[#00A63E] rounded-full items-center justify-center gap-2.5 font-[inter] font-semibold text-white text-base"><span>0</span> Copy</div>
             </div>
         </nav>
         <section id="banner"
             class="w-[100vw] h-60 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] justify-center items-center text-center flex flex-col">
-            <img src="assets/logo-dark.png" alt="Bangladesh Logo" class="w-[92px] h-[92px]">
+            <img src="assets/logo-dark.png" alt="Bangladesh Logo" class="w-[92px] aspect-square">
             <h1 class="text-white bangla text-[40px] font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
             <p class="text-white text-xl font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
             </p>
         </section>
     </header>
     <main>
-        <section id="info-cards"></section>
+        <section id="info-cards" class="mt-12 ml-[60px] mr-[30px]">
+            <div class="h-fit w-[436px] rounded-xl bg-white shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] p-8 flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <div class="w-[60px] aspect-square rounded-2xl bg-[#FFE3E2] flex items-center justify-center">
+                    <img src="assets/emergency.png" alt="Emergency" class="w-[32px] aspect-square"></div>
+                    <i class="fa-regular fa-heart fa-lg"></i>
+                </div>
+                
+                    <div class="flex flex-col gap-6">
+                        <div class="flex flex-col">
+                            <p class="text-2xl bangla font-bold">জাতীয় জরুরি সেবা</p>
+                            <p class="font-[roboto] text-lg text-[#5C5C5C]">National Emergency</p>
+                        </div>
+                        <div>
+                            <p class="font-[roboto] font-bold text-[32px] text-[#111]">999</p>
+                            <div class="py-[6px] px-4 flex justify-center items-center rounded-full bg-[#F2F2F2] w-fit"><span class="bangla text-lg font-[#5C5C5C]">সার্বজনীন</span>
+                        </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button class="btn btn-outline flex items-center gap-[6px] justify-center rounded-lg text-[#5C5C5C] border-[#D4D6D5] font-normal"><i class="fa-regular fa-copy fa-1x"></i><span class="font-[roboto] text-base">Copy</span></button>
+
+                            <button class="btn btn-ghost flex items-center gap-[6px] justify-center rounded-lg text-white bg-[#00A63E] font-normal "><i class="material-symbols-outlined">
+                                call
+                            </i><span class="font-[roboto] text-base">Call</span></button>
+                        </div>
+                    </div>
+            </div>
+        </section>
         <aside></aside>
     </main>
 </body>
