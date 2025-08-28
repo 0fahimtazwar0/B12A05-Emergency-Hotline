@@ -10,3 +10,7 @@
         'opsz' 24
 }
 
+.fa-heart{
+    transition: all 0.2s ease;
+}
+
