@@ -46,3 +46,8 @@ for (let i = 0; i < allCardTitles.length; i++) {
         historyContainer.appendChild(dataDiv)
     })
 }
+
+// clear history
+document.getElementById('clear-history-btn').addEventListener('click', function () {
+    historyContainer.innerHTML = ''
+})
