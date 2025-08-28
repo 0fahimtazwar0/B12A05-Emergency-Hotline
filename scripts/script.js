@@ -8,6 +8,18 @@ for (const singleHeart of hearts) {
         document.getElementById('heart-count').innerText = heartCount;
     })
 }
+// copy btn
+const allCopyBtn = document.getElementsByClassName('copy-btn')
+let copyCount = parseInt(document.getElementById('copy-count').innerText)
+
+for (let i = 0; i < allCopyBtn.length; i++) {
+    allCopyBtn[i].addEventListener('click', function () {
+        copyCount++
+        document.getElementById('copy-count').innerText = copyCount;
+        navigator.clipboard.writeText(document.getElementsByClassName('call-number')[i].innerText)
+        alert(document.getElementsByClassName('call-number')[i].innerText + ' Copied')
+    })
+}
 
 // alert
 const allCardTitles = document.getElementsByClassName('card-title')
@@ -51,3 +63,5 @@ for (let i = 0; i < allCardTitles.length; i++) {
 document.getElementById('clear-history-btn').addEventListener('click', function () {
     historyContainer.innerHTML = ''
 })
+
+
