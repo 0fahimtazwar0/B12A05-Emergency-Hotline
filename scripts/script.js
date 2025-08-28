@@ -17,31 +17,33 @@ for (let i = 0; i < allCopyBtn.length; i++) {
         copyCount++
         document.getElementById('copy-count').innerText = copyCount;
         navigator.clipboard.writeText(document.getElementsByClassName('call-number')[i].innerText)
-        alert(document.getElementsByClassName('call-number')[i].innerText + ' Copied')
+        alert('📋 ' + document.getElementsByClassName('call-number')[i].innerText + ' copied to clipboard!')
     })
 }
 
 // alert
 const allCardTitles = document.getElementsByClassName('card-title')
+const allCardTitlesEnglish = document.getElementsByClassName('card-title-english')
 const allCallNumbers = document.getElementsByClassName('call-number')
 const allCallButtons = document.getElementsByClassName('call-btn')
 let historyContainer = document.getElementById('history-container')
 
-// coin cut
+// call btn and coin cut
 let coinCount = parseInt(document.getElementById('coin-count').innerText)
 
 
 for (let i = 0; i < allCardTitles.length; i++) {
     const cardTitle = allCardTitles[i].innerText;
+    const cardTitleEnglish = allCardTitlesEnglish[i].innerText;
     const callNumber = allCallNumbers[i].innerText;
     const callBtn = allCallButtons[i]
     
     callBtn.addEventListener('click', function () {
         if (coinCount < 20) {
-            alert('Insufficient Coins')
+            alert('🚫 Oops! Not enough coins to continue.')
             return
         }
-        alert(cardTitle + ' ' + callNumber)
+        alert('📞 Calling '+cardTitleEnglish + ' ' + callNumber +'...')
         coinCount -= 20;
         document.getElementById('coin-count').innerText = coinCount;
         
