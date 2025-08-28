@@ -65,3 +65,49 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
 })
 
 
+
+// mobile responsive
+const homeSection = document.getElementById('info-cards')
+const historySection = document.getElementById('history-section')
+document.getElementById('home-btn').addEventListener('click', function () {
+    document.getElementById('history-section').style.display = 'none';
+    document.getElementById('info-cards').style.display = 'grid'
+})
+document.getElementById('history-btn').addEventListener('click', function () {
+    document.getElementById('info-cards').style.display = 'none';
+    document.getElementById('history-section').style.display = 'flex'
+    
+})
+
+
+// breakpoint to bring everything back
+const breakpointNum = window.matchMedia("(min-width: 1024px)")
+
+function breakpointChange() {
+    if (breakpointNum.matches) {
+        document.getElementById('info-cards').style.display = 'grid'
+        document.getElementById('history-section').style.display = 'flex'
+    }
+}
+breakpointChange();
+breakpointNum.addEventListener("change", function () {
+    breakpointChange();
+});
+
+// breakpoint to only show home as default
+const breakpointNum2 = window.matchMedia("(max-width: 1024px)")
+
+function breakpointChange2() {
+    if (breakpointNum2.matches) {
+        document.getElementById('info-cards').style.display = 'grid'
+        document.getElementById('history-section').style.display = 'none'
+    }
+}
+breakpointChange2();
+breakpointNum2.addEventListener("change", function () {
+    breakpointChange2();
+});
+
+
+
+
