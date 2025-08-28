@@ -27,14 +27,17 @@
     
 
     <header class="bg-white">
-        <nav class="px-[60px] py-6 justify-between items-center h-fit flex">
+
+
+
+        <nav class="w-full px-[60px] py-6 md:justify-between md:items-center h-fit flex flex-col md:flex-row gap-4">
             <div class="flex items-center gap-2.5">
                 <img src="assets/logo.png" alt="Bangladesh Logo" class="w-[50px] aspect-square">
                 <h3 class="font-[inter] font-black text-[#006747] text-xl">Emergency<br>
                     Service
                 </h3>
             </div>
-            <div class="flex gap-5">
+            <div class="flex gap-5 justify-center">
                 <div class="flex h-[52px] w-[123px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span id="heart-count" class="font-[inter] font-black text-base">0</span><img src="assets/heart.png" alt="Heart" class="w-[30px] aspect-square"></div>
 
                 <div class="flex h-[52px] w-[106px] bg-[#41ff6b1a] rounded-full items-center justify-center gap-2.5"><span id="coin-count" class="font-[inter] font-black text-base">100</span><img src="assets/coin.png" alt="Coin" class="w-6 aspect-square"></div>
@@ -43,15 +46,15 @@
             </div>
         </nav>
         <section id="banner"
-            class="w-fu h-60 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] justify-center items-center text-center flex flex-col">
+            class="w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] justify-center items-center text-center flex flex-col px-[60px] py-[21px]">
             <img src="assets/logo-dark.png" alt="Bangladesh Logo" class="w-[92px] aspect-square">
             <h1 class="text-white bangla text-[40px] font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
             <p class="text-white text-xl font-semibold">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
             </p>
         </section>
     </header>
-    <main class="px-[60px] flex gap-[30px]">
-        <section id="info-cards" class="mt-12 grid grid-cols-3 gap-[30px] w-[1370%]">
+    <main class="px-[60px] flex gap-[30px] flex-col lg:flex-row">
+        <section id="info-cards" class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px] w-full lg:w-[1370%]">
             <div class="h-fit rounded-xl bg-white shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] p-8 flex flex-col gap-4">
                 <div class="flex justify-between items-center">
                     <div class="w-[60px] aspect-square rounded-2xl bg-[#FFE3E2] flex items-center justify-center">
@@ -323,7 +326,7 @@
                     </div>
             </div>
         </section>
-        <aside class="w-[400%] p-6 flex flex-col gap-4 rounded-xl bg-white shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] mt-12">
+        <aside class="w-full lg:w-[400%] p-6 flex flex-col gap-4 rounded-xl bg-white shadow-[0_2px_3px_0_rgba(0,0,0,0.15)] mt-12">
             <div class="flex justify-between items-center">
                 <div class="flex justify-center items-center gap-2">
                 <i class="fa-regular fa-clock fa-xl text-[#5C5C5C]"></i>
