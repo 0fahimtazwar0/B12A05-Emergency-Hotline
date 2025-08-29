@@ -1,165 +1,56 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
+# Questions & Answers
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
+### 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
+#### Answer:
+1. **getElementById** returns a single element or null if the id doesn't exit
+2. **getElementsByClassName** returns an array like object called HTMLCollection, if the class doesn't exist it will return an empty array
+3. **querySelector** selects objects like css, it will return the first element matching description, if it doesn't find any element as desciption it will return null
+4. **querySelectorAll** works similarly as **querySelector** but it will return all the elements with matching description in an array like object named Nodelist. if it doesn't find anything it will return an empty array similar to **getElementsByClassName**
 
 ---
+### 2. How do you **create and insert a new element into the DOM**?
 
-### 2. Hero Section
+#### Answer:
+- Declaring a variable with **createElement("div")**\
+```let newDiv = document.createElement("div")```
 
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
+- Changing the **innerHTML**\
+  ```newDiv.innerHTML = `<p>hello guys</p>` ```
+
+- Inserting the div into the DOM
+  ```
+  let containerDiv = document.getElementById('container-div')
+  containerDiv.appendChild(newDiv)
+  ```
+---
+ ### 3. What is **Event Bubbling** and how does it work?
+
+ #### Answer:
+**Event Bubbling** is when you click something in html such as a div, the div will register the click and if the parent div of the clicked div also have an event listener it will also register the click, if the parent div of the current parent div also have an event listener it will also register click and it will go on like this untill there is no event listener in the parent div.
+
+To stop **Event Bubbling** we can use **stopPropagation()**
 
 ---
+ ### 4. What is **Event Delegation** in JavaScript? Why is it useful?
 
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
+ #### Answer:
+ When we have many event listener in a single div, it becomes very memory consuming so instead we only give the parent div a event listener. it locates the element clicked inside it and returns. this way we can have many event listener and save memory consumption. this whole process is called **Event Delegation**. it is useful for making faster websites
+ 
 ---
+ ### 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
-### 3. Responsiveness (5 Marks)
+ #### Answer:
+- **preventDefault()** is used to stop a website from reloading while form submitting, it is really useful while development of the website.
+  
+  ```
+  document.getElementById('submit').addEventListener('click', function (e) {
+    e.preventDefault()})
+  ```
+  
+- **stopPropagation()** is used to stop a website from **Event Bubbling** as above explained.
+  
+  ```
+  document.getElementById('child-div').addEventListener('click', function (e) {
+    e.stopPropagation()})
+  ```
 
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
-
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
