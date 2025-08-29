@@ -51,10 +51,10 @@ for (let i = 0; i < allCardTitles.length; i++) {
         dataDiv.innerHTML =
         `<div class="bg-[#FAFAFA] p-4 flex justify-between items-center rounded-lg">
         <div class="flex flex-col gap-1">
-        <p class="bangla text-lg text-[#111]">${cardTitle}</p>
-        <p class="text-lg text-[#5C5C5C]">${callNumber}</p>
+        <p class="bangla text-base sm:text-lg text-[#111]">${cardTitle}</p>
+        <p class="text-base sm:text-lg text-[#5C5C5C]">${callNumber}</p>
         </div>
-        <span class="text-lg text-[#111]">${new Date().toLocaleTimeString()}</span>
+        <span class="text-base sm:text-lg text-[#111]">${new Date().toLocaleTimeString()}</span>
         </div>`
         
         historyContainer.appendChild(dataDiv)
